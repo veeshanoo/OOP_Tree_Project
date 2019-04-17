@@ -69,14 +69,14 @@ Node<T>* AVL<T>::rotateLeft(Node<T>* &node) {
     return aux;
 }
 
-/// Right right rotation
+/// Left right rotation
 template <class T>
 Node<T>* AVL<T>::rotateLeftRight(Node<T>* &node) {
     node->left = rotateLeft(node->left);
     return rotateRight(node);
 }
 
-/// Left left rotation
+/// Right left rotation
 template <class T>
 Node<T>* AVL<T>::rotateRightLeft(Node<T>* &node) {
     node->right = rotateRight(node->right);
